@@ -1,0 +1,39 @@
+{% extends 'index.html'%}
+
+{% load static %}
+
+{% block body%}
+ <div class="div1 ">     <!-- -->
+  <h1 class="hd1">BIGGEST DEALS ON SUMMER</h1>
+</div>
+<div class="container-fluid ">
+    {% if category %} 
+    <h1 class="hd3">{{category.name}}</h1>
+    <img src="{{category.banner.url}}" class=" img1 w-100 " height="650px" >
+    {% else %}
+      {% include 'slide.html' %}
+    {% endif %}
+    <h1 class=" hd2 justify-content-center d-flex">Explore The Summer</h1>
+   <div class="bg-success p-2 text-dark bg-opacity-25">
+        <div class="container ">
+            <div class="row">
+              
+                {% for i in product_list %}
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
+           
+                   <div class="card" style="width: 16rem;">
+                       <img src="{{ i.image.url }}" class="card-img-top w-100" height="254px" alt="...">
+                       <div class="card-body">
+                         <h5 class="card-title">{{i.name}}</h5>
+                         <h3 class="card-text"><i class="bi bi-currency-rupee"></i>{{i.price}}</h3>
+                         <a href="{% url 'shop:details' i.id %}" class="btn btn-primary">More details</a>
+                       </div>
+                     </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+      </div>
+</div>
+
+{% endblock %}

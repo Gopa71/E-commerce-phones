@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Orbitron&display=swap');
+
+.hd1{font-family: 'Abril Fatface', serif;font-weight: bolder;   
+}
+.div1{height: 80px;margin-top: 30px;
+    padding-left: 10px;
+}
+.hd2{font-family: 'Abril Fatface', serif; 
+    margin-bottom: 20px; 
+    margin-top: 40px;  
+}
+
+
+
+.hd3{position: absolute;
+    left: 10%;
+    top:30%;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 400px;
+    
+}
+.img1::before{filter: brightness(45%);}
+
+.div_d1{background-color: aqua;border: solid 2px black;}
+
+
+
+
+img 
+{
+    width: 70%;
+}
+.a,.a1
+{
+    display: inline-block;
+}
+.a1
+{
+    color: rgb(0, 255, 0);
+}
+.i
+{
+    border: 5px solid rgb(0, 255, 149);
+    border-radius: 1px;
+}
+.star
+{
+    color:gold
+}
+
+
+.add-to-cart,.buy-now
+{
+    margin-top: 3%;
+}
+
+
+/* CSS */
+.add-to-cart {
+  align-items: center;
+  background-color: rgb(213, 88, 10);
+  border: 2px solid rgb(241, 132, 7);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.add-to-cart:focus {
+  color: #171e29;
+}
+
+.add-to-cart:hover {
+  background-color: #e09603;
+  border-color: #ea8a03;
+  fill: rgb(223, 102, 3);
+}
+
+.add-to-cart:active {
+  background-color: #dfa906;
+  border-color: #d75a07;
+  fill: rgb(219, 147, 5);
+}
+
+@media (min-width: 768px) {
+  .add-to-cart {
+    min-width: 170px;
+  }
+}
+
+.buy-now {
+    align-items: center;
+    background-color: rgb(213, 88, 10);
+    border: 2px solid rgb(241, 132, 7);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .buy-now:focus {
+    color: #171e29;
+  }
+  
+  .buy-now:hover {
+    background-color: #ff3c00;
+    border-color: #ff5b03;
+    fill: rgb(242, 59, 3);
+  }
+  
+  .buy-now:active {
+    background-color: #f87204;
+    border-color: #eb6206;
+    fill: rgb(243, 89, 6);
+  }
+  
+  @media (min-width: 768px) {
+    .buy-now {
+              min-width: 170px;        
+             }
+}

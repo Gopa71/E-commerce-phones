@@ -1,0 +1,42 @@
+{% extends 'index.html'%}
+
+{% load static %}
+
+{% block body%}
+
+
+
+
+<div class="container">
+   <div class="row">
+       <div class="col-lg-5">
+        <img class="i" src="{{data.image.url}}" alt="">
+        <a href=""><button class="add-to-cart" >Add to cart</button></a>
+        <a href=""><button class="buy-now">Buy now</button></a>
+       </div>
+       <div class="col-lg-7">
+         <h1>{{data.title}}</h1>
+         <p>{{data.description}}</p>
+         <h2 class="a">{{data.price}}</h2>  <p class="a1">{{data.discountPercentage}}%off</p>
+         <p>{{data.rating}}</p>
+         <p>category:{{data.category}}</p>   
+        
+       </div>
+   </div>
+ </div>
+ 
+
+{% endblock %}
+
+
+<!-- <div class="container">
+   <div class="row">
+       <div class="div_d1 col-lg-5">
+        
+          <img src="{{data.image.url}}"  alt="">
+       </div>
+       <div class="col-lg-7">
+          <h1>helo</h1>
+       </div>
+   </div>
+</div> -->
