@@ -7,17 +7,17 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
    <div class="row">
-       <div class="col-lg-5">
+       <div class="col-lg-5 col-md-6 col-sm">
         <img class="i" src="{{data.image.url}}" alt="">
-        <a href=""><button class="add-to-cart" >Add to cart</button></a>
-        <a href=""><button class="buy-now">Buy now</button></a>
+        <a href=""><button class="add-to-cart" ><i class="bi bi-cart-check-fill"></i>Add to cart</button></a>
+        <a href=""><button class="buy-now"><i class="bi bi-lightning-charge"></i>Buy now</button></a>
        </div>
-       <div class="col-lg-7">
-         <h1>{{data.title}}</h1>
+       <div class="col-lg-7 col-md col-sm">
+         <h1>{{data.name}}</h1>
          <p>{{data.description}}</p>
-         <h2 class="a">{{data.price}}</h2>  <p class="a1">{{data.discountPercentage}}%off</p>
+         <h2 class="a"><i class="bi bi-currency-rupee"></i>{{data.price}}</h2>  <p class="a1">{{data.discountPercentage}}%off</p>
          <p>{{data.rating}}</p>
          <p>category:{{data.category}}</p>   
         

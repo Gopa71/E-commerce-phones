@@ -20,7 +20,9 @@ from django.conf.urls.static import static
 from phoneproject import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('phone.urls'))
+    path('',include('phone.urls')),
+    path('search/',include('searchApp.urls')),
+    path('credential/',include('credential.urls'))
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

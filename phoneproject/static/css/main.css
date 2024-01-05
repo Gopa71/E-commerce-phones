@@ -23,7 +23,10 @@
     font-size: 400px;
     
 }
-.img1::before{filter: brightness(45%);}
+
+.img1::before{
+  filter: brightness(45%);
+}
 
 .div_d1{background-color: aqua;border: solid 2px black;}
 
@@ -157,3 +160,5 @@ img
               min-width: 170px;        
              }
 }
+
+/* navbar */

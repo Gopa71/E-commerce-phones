@@ -1,20 +1,22 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-light navbar-light 
+">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#"><img  src="{% static 'images/logo.jpg' %}" class="w-100" height="100px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="txt nav-link active" aria-current="page" href="#"><b>Home</b> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="txt nav-link" href="#"><b>Link</b></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+            <a class="txt nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b> Dropdown</b>
+             
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'shop:allProCat' %}">All Products</a></li>
@@ -23,12 +25,18 @@
             {% endfor %}
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+          
+          <div class="d-flex me-auto">
+          <li class="nav-item" role="presentation">
+            <a  href="{% url 'reg:register' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">REGISTER</button></a>
           </li>
+          <li class="nav-item" role="presentation">
+            <a  href="{% url 'reg:login' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">LOGIN</button></a>
+          </li>
+        </div> 
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" role="search" method="get" action="{% url 'search:search' %}">
+          <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-warning" type="submit">Search</button>
         </form>
       </div>

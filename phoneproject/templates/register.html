@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block body%}
+
+
+<h1 class="hd2">Register</h1>
+<div class="container">
+  <div class="row reg1">
+    <div class="col-lg">
+     <form  action="" method="post">
+      {% csrf_token %}
+        <div class="row mb-3">
+          <label for="inputUsername3" class="col-sm-2 col-form-label">username</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="username"  id="inputUsername3">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputFirstname3" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="first_name" id="inputFirstname3">
+          </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputLastname3" class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="last_name" id="inputLastname3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" name="email" id="inputEmail3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="password" id="inputPassword3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputC_Password3" class="col-sm-2 col-form-label">Confirm Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="c_password" id="inputC_Password3">
+            </div>
+            </div>
+            <div class="divbt">
+              <button type="submit" class="bt1">Submit</button>
+            </div>
+          </div>
+          <div class="div_r1">
+            <h1>Select Your Option</h1>
+            <label>
+                <input type="radio" name="seller" value="0">
+                Seller
+            </label>
+        
+            <label>
+                <input type="radio" name="Buyer" value="1">
+                Buyer
+            </label>
+        
+           
+        
+            <!-- You can add more radio buttons as needed within the same "name" attribute to create a group. -->
+        
+            <input type="submit" value="Submit">
+          </div>
+       </form>
+       {% for i in messages %}
+       {{i}}
+     {% endfor %}
+    </div>
+    </div>
+
+    {% endblock %}
