@@ -1,7 +1,11 @@
+
+
 {% load static %}
+
+
 <nav class="navbar navbar-expand-lg bg-light navbar-light 
 ">
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <a class="navbar-brand" href="#"><img  src="{% static 'images/logo.jpg' %}" class="w-100" height="100px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,9 +13,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="txt nav-link active" aria-current="page" href="#"><b>Home</b> </a>
+          {% if user.is_authenticated %}
+           <a class="txt nav-link active" aria-current="page" href="#"><b>{{ user }}</b> </a>
+             <!-- Add other content for authenticated users -->
+          {% else %}
+              <!-- Add content for non-authenticated users -->
+          {% endif %}        
           </li>
-          <li class="nav-item">
+          <li class="nav-item " >
             <a class="txt nav-link" href="#"><b>Link</b></a>
           </li>
           <li class="nav-item dropdown">
@@ -26,19 +35,22 @@
             </ul>
           </li>
           
-          <div class="d-flex me-auto">
-          <li class="nav-item" role="presentation">
-            <a  href="{% url 'reg:register' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">REGISTER</button></a>
+          <div class="div_n2">
+          <li class="nav-item me-2" role="presentation">
+            <a href="{% url 'reg:register' %}" ><button class="btn btn-danger" role="button">REGISTER</button></a>
           </li>
           <li class="nav-item" role="presentation">
-            <a  href="{% url 'reg:login' %}"><button class="nav-link bt" id="pills-NEWS & EVENTS-tab" data-bs-toggle="pill" data-bs-target="#pills-NEWS & EVENTS" type="button" role="tab" aria-controls="pills-NEWS & EVENTS" aria-selected="false">LOGIN</button></a>
+            <a href="{% url 'reg:login' %}" ><button class="btn btn-success" role="button">LOGIN</button></a>
           </li>
         </div> 
         </ul>
         <form class="d-flex" role="search" method="get" action="{% url 'search:search' %}">
+          <div class="div_n3">
           <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-warning" type="submit">Search</button>
+        </div>
         </form>
       </div>
     </div>
   </nav>
+  

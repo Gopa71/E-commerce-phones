@@ -47,27 +47,18 @@
               <input type="password" class="form-control" name="c_password" id="inputC_Password3">
             </div>
             </div>
-            <div class="divbt">
-              <button type="submit" class="bt1">Submit</button>
-            </div>
+            
           </div>
-          <div class="div_r1">
-            <h1>Select Your Option</h1>
-            <label>
-                <input type="radio" name="seller" value="0">
-                Seller
-            </label>
+          <div class="div_r1 ">
+            <select name="account_type" id="">
+              <option value="">Select one option</option>
+              <option value="1" name="seller">Seller</option>
+              <option value="0" name="buyer">Buyer</option>
+            </select>
         
-            <label>
-                <input type="radio" name="Buyer" value="1">
-                Buyer
-            </label>
-        
-           
-        
-            <!-- You can add more radio buttons as needed within the same "name" attribute to create a group. -->
-        
-            <input type="submit" value="Submit">
+          </div>
+          <div class="divbt">
+            <button type="submit" class="bt1">Submit</button>
           </div>
        </form>
        {% for i in messages %}
